@@ -1,0 +1,261 @@
+body{
+	font:12px "微软雅黑";
+	margin:0;
+	padding:0;
+}
+p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+.over{overflow:hidden;}
+
+a  {
+    color:#666;
+    text-decoration:none;
+}
+
+#content{
+	width:1325px;
+	height:px;
+	margin:0 auto;
+}
+#header{
+	background:#eee;
+	height:33px;
+	line-height:33px;
+}
+#header p.rt{
+	color:#1E2E3E;
+	margin-right:30px;
+}
+#header span{
+	margin-left:20px;
+}
+#header span a{
+	color:#1E2E3E;
+}
+#header span a:hover{
+	color:red;
+}
+#logo{
+	height:72px;
+	background:#1E3041;
+	border-bottom:3px solid #EE3A3A;
+}
+#logo ul{
+	margin-right:40px;
+}
+#logo ul li{
+	float:left;
+	margin-left:20px; 
+	position:relative;
+}
+
+#logo ul li a{
+	color:#fff;
+	font-size:16px;
+	line-height:72px;
+}
+#logo ul li a b{
+
+	display:none;
+	height:9px;
+	width:16px;
+	background:url(01.png) no-repeat;
+	position:absolute;
+	bottom:0px;
+	left:24px;
+}
+#logo ul li a:hover{
+	color:#EE3737;
+}
+#logo ul li a:hover b{
+		display:inline-block;
+}
+#logo ul li a:focus{
+	color:#EE3737;
+}
+#logo ul li a:focus b{
+	display:inline-block;
+}
+#boder{
+	overflow:hidden;
+}
+#boder div.lf{
+	width:170px;
+	background:#F3F3F3;
+}
+#blue{
+	float:left;
+	width:43px;
+	height:450px;
+	border-right:1px solid #4A6C90;
+}
+#boder div.lf ul{
+	float:left;
+	margin-left:15px;
+	margin-top:27px;
+}
+#boder div.lf ul li{
+	margin:10px 0;
+	position:relative;
+}
+#boder div.lf ul li a{
+	font-size:16px;
+	color:#1E3041;
+}
+#boder div.lf ul li a i{
+	display:inline-block;
+	width:15px;
+	height:15px;
+	border:1px solid #293A49;
+	border-radius:50%;
+	position:absolute;
+	top:4px;
+	left:-24px;
+	background:#F3F3F3;
+}
+#boder div.lf ul li a.nian{
+	display:inline-block;
+	width:70px; 
+	height:28px;
+	font-size:16px;
+	font-weight:bold;
+	background:#1E3041;
+	line-height:28px;
+	text-align:center;
+	border-radius:5px;
+	color:#fff;
+}
+#boder div.lf ul li a.nian:hover{
+	background:#EE3A3A;	
+}
+#boder div.lf ul li a.nian:focus{
+	background:#EE3A3A;	
+}
+#boder div.lf ul li a:focus i{
+	background:#EE3A3A;
+}
+#boder div.lf ul li a:hover i{
+	background:#EE3A3A;
+}
+#tupian{
+overflow:hidden;
+}
+#boder #tupian ul{
+	margin-top:5px;
+	margin-right:5px;
+	float:right;
+	width:1091px;
+	height:373px;
+}
+ #tupian ul li{
+	position:relative;
+	width:543px;
+	height:184px;
+	float:left;
+}
+#tupian ul li p{
+		position:absolute;
+		bottom:0px;
+		width:509px;
+		height:40px;
+		line-height:40px;
+		color:#fff;
+		font-size:14px;
+		background:#3B536B;
+		opacity:0.8;
+		padding-right:29px;
+		padding-left:5px;
+}
+#tupian ul li.tp01{
+	margin-bottom:5px;
+	margin-right:5px;
+	background:url(tp/57956fc38fa9b.png)no-repeat;
+}
+#tupian ul li.tp02{
+	margin-bottom:5px;
+	background:url(tp/57958ab0321ed.png)no-repeat;
+}
+#tupian ul li.tp03{
+	margin-right:5px;
+	background:url(tp/5775d32abf1c1.png)no-repeat;
+}
+#tupian ul li.tp04{
+	background:url(tp/573c1821b39c2.png)no-repeat;
+}
+#tupian ul li div{
+	transform:translatey(190px);
+	width:543px;
+	height:184px;
+	text-align:center;
+	background:#3B536B;
+	opacity:0.8;
+
+}
+#tupian ul li div span{
+  display:inline-block;
+	color:#fff;
+	vertical-align:middle;
+	margin-top:50px;
+	line-height:23px;
+}
+#tupian ul li:hover p{
+	display:none;
+}
+#tupian ul li:hover div{
+	transform:translatey(0px);
+	transition:transform linear 0.3s;
+}
+#fanye{
+	margin:0 auto;
+	width:220px;
+	padding-top:17px;
+	padding-bottom:10px;
+}
+#fanye div{
+	transform:translatex(112px);
+	width:220px;
+	height:43px;
+	line-height:43px;
+	text-align:center;
+	border:1px solid #3B536B;
+}
+#fanye div a.lf{
+	width:45px;
+	height:43px;
+	background:url(tp/150108.png) no-repeat;
+}
+#fanye div a.rt{
+  width:45px;
+	height:43px;
+	background:url(tp/145952.png) no-repeat;
+}
+#fanye div span{
+	color:#3B536B;
+	font-size:15px;
+}
+#fanye div a.lf:hover{
+	background:url(tp/150109.png)no-repeat;
+}
+#fanye div a.rt:hover{
+	background:url(tp/145953.png)no-repeat;
+}
+#foot{
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	background:#232323;
+}
+#foot p,#foot p a{
+	color:#fff;
+}
+#foot p a:hover{
+	text-decoration:underline;
+	cursor:pointer;
+}
+

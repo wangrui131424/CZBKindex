@@ -1,0 +1,1583 @@
+<!DOCTYPE	HTML>
+ <head>
+		<title>new document</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/guo.css">
+		<link rel="stylesheet" href="css/wang.css">
+		<style>
+		</style>
+		<script>
+		window.onload = function (){
+ var oul =document.getElementById("oul");
+ var speed = -5;
+ oul.innerHTML += oul.innerHTML; 
+ var cnt = oul.offsetLeft; 
+ function move(){
+ cnt += speed;
+ //console.log(cnt);
+ if(cnt<-(oul.offsetWidth-160)){
+        oul.style.left = 0;
+		cnt = 0;
+		}
+	 if(cnt%915==0){
+    oul.style.left = cnt+"px";
+ }
+//console.log(oul.offsetLeft);
+ }
+ var timer = setInterval(move,30);
+ }
+
+ function b_lt(){
+ if(oul.offsetLeft>-1830)
+oul.style.left = oul.offsetLeft-915+"px";
+}
+function b_rt(){
+ if(oul.offsetLeft<0)
+oul.style.left = oul.offsetLeft+915+"px";
+}
+ function  over(){
+ var nav_hide = document.getElementById("nav_hide");
+ nav_hide.style.display = "block";
+}
+function  out(){
+var nav_hide = document.getElementById("nav_hide");
+nav_hide.style.display = "none";
+}
+function  b_over(){  
+ var b = document.getElementById("b");
+  var b1 = document.getElementById("b1");
+ b.style.display = "block";
+  b1.style.display = "block";
+}
+function  b_out(){
+var b = document.getElementById("b");
+ var b1 = document.getElementById("b1");
+b.style.display = "none";
+b1.style.display = "none";
+}
+  function click(){
+  var compus = document.getElementById("compus");
+	var a_btn = document.getElementById("a_btn");
+	var bmlc=document.getElementById("bmlc");
+  compus.style.display = "block";
+	a_btn.style.backgroundColor="#fff";
+	a_btn.style.borderBottom="0";
+	compus.style.zIndex="-1";
+	a_btn.style.zIndex="10";
+	bmlc.style.borderBottom="0";
+	bmlc.style.zIndex="-5";
+
+  }
+   function clickout(){
+  var compus = document.getElementById("compus");
+		var a_btn = document.getElementById("a_btn");
+  compus.style.display = "none";
+		a_btn.style.backgroundColor="#f9f9f9";
+
+  }
+
+ var t;
+
+ function outDiv(){
+ t = setTimeout('out()',400);
+ }
+
+  function cleartimer(){
+  clearTimeout(t);
+  }
+
+		</script>
+ </head>
+ <body>
+       <header id="header">
+				<!--页面顶部-->
+				<div id="top_content">
+				<p style = "display:inline-block; ">
+		          传智播客旗下品牌：<a href = "#">黑马程序员</a>&nbsp;|&nbsp;<a href = "#">博学谷</a>
+		        </p>
+				<p style = "float:right;display:inline-block;">改变中国IT教育，我们正在行动     全国咨询热线：400-618-4000</p>
+				</div>
+		</header>
+	<div id="top"   onclick = "clickout();">
+		
+		<nav id="nav">
+				<!--logo-->
+		<h1>
+		<a href = "#"><img src = "img/logo.png"></a>
+		</h1>
+		<!--导航 -->
+		<div class = "nav_ul">
+		<ul>
+		<li><a href = "#" onmouseover = "over();">免费学习资源</a></li>
+		<li><a href = "view.html" target="_blank">课程中心</a></li>
+		<li><a href = "#">学习指南</a></li>
+		<li><a href = "story/story.html" target="_blank">学员故事</a></li>
+		<li><a href = "#">传智社区</a></li>
+		<li><a href = "#">教学直播间</a>
+		<img src = "img/hot.gif">
+		</li>
+		</ul>
+		<div id = "nav_hide" onmouseout = "outDiv();" onmouseover = "cleartimer();">
+
+			<!--
+			<div id = "nav_hide" onmouseout = "out();">
+				<dl>
+				<dd><img src = "img/studybg.jpg"></dd>
+				<dt></dt>
+				</dl>
+				<dl>
+				<dd><img src = "img/yunbg.jpg"></dd>
+				<dt></dt>
+				</dl>
+			</div>
+			-->
+			<ul>
+					<li>
+							<a href="#">
+								<img src = "img/openbg.jpg">
+								<b>公开课</b>
+							</a>
+					</li>
+					<li>
+							<a href="view.html">
+								<img src = "img/kubg.jpg">
+								<b>视频库</b>
+							</a>
+					</li>
+					<li>
+							<a href="#">
+								<img src = "img/yunbg.jpg">
+								<b>云课程</b>
+							</a>
+					</li>
+					<li>
+							<a href="#">
+								<img src = "img/studybg.jpg">
+								<b>学习光盘</b>
+							</a>
+					</li>
+					<li>
+							<a href="#">
+								<img src = "img/bybg.jpg">
+								<b>原创教材</b>
+							</a>
+					</li>
+					<li class="noborder">
+							<a href="#">
+								<img src = "img/tkbg.jpg">
+								<b>传智特刊</b>
+							</a>
+					</li>
+				
+			</ul>
+		</div>
+		</div>
+		<div class = "top_btn">
+		<a id = "a_btn" href = "javascript:click();">全国校区&nbsp;&nbsp;▽</a>
+		<div id = "compus">
+				<ul class="lf">
+					<li>北京校区</li>
+					<li>上海校区</li>
+					<li>广州校区</li>
+					<li>深圳校区</li>
+					<li>武汉校区</li>
+					<li>郑州校区</li>
+					<li>西安校区</li>
+					<li>哈尔滨校区</li>
+					<li>长沙校区</li>
+					<li>济南校区</li>
+					<li>重庆校区</li>
+					<li>南京校区</li>
+					<li>杭州校区</li>
+					<li>成都校区</li>
+				</ul>
+		
+		</div>
+		<a id="bmlc" href = "#">报名流程</a>
+		</div>
+          
+		</nav>
+
+
+
+		<div id="banner">
+				<!--广告部分-->
+           <div id = "scoll_ad" onmouseover = "b_over();"onmouseout = "b_out();">
+                <ul id = "oul">
+                   <li><img src = "img/1.jpg"></li>
+                   <li><img src = "img/2.jpg"></li>
+                   <li><img src = "img/3.jpg"></li>
+                </ul>
+               <div id = "teachclass">
+			   </div>
+			   <div id = "teachinfo">
+			   <ul>
+				  <li><a href = "#">JavaEE培训</a><b>></b></li>
+				  <li><a href = "#">Android培训</a><b>></b></li>
+				  <li><a href = "#">PHP培训</a><b>></b></li>
+			      <li><a href = "#">UI设计培训</a><b>></b></li>
+		       	  <li><a href = "#">iOS培训</a><b>></b></li>
+	    		  <li><a href = "#">前端与移动开培训</a><b>></b></li>
+		     	  <li><a href = "#">C/C++培训</a><b>></b></li>
+                  <li><a href = "#">网络营销培训</a><b>></b></li>
+				  <li><a href = "#">Python培训</a><b>></b></li>
+				  <li><a href = "#">云计算之大数据培训</a><b>></b></li>
+				  </ul>
+				  </div>
+                     
+				
+					    <b class = "lt" id = "b" onclick = "b_lt();"></b>
+					     <b class = "rt" id = "b1" onclick = "b_rt();"></b>
+					
+
+           </div>
+		   
+		   </div>
+		   <div id = "info">
+		   <p>信息港</p>
+		   <ul>
+		          <li><b></b><a href = "#">2016年传智各学科学费价格表</a></li>
+		          <li><b></b><a href = "#">轻松了解传智播客十大学科</a></li>
+			      <li><b></b><a href = "#">这个暑假，足不出户拿万元高薪</a></li>
+			      <li><b></b><a href = "#">暑假钜惠0元上课30天，活力开抢</a></li>
+			      <li><b></b><a href = "#">5个月，带你学透c/c++全栈开发</a></li>
+			      <li><b></b><a href = "#">紧随WWDC，IOS4.0课程震撼出炉</a></li>
+				  <li><b></b><a href = "#">UI设计打造大码的全能设计师</a></li>
+				  <li><b></b><a href = "#">PHP祝你快速入门，就业冲击10K+</a></li>
+				   <li><b></b><a href = "#">10月8日，前端学科入住西安城</a></li>
+		   </ul>
+		   </div>
+           
+		   <div class = "topbt_ad">
+		    <div class = "top_leftul">
+			<img src = "img/divright.jpg ">
+			</div>
+		   <ul>
+		   <li><a href = "#"><img src = "img/liright1.jpg "></a></li>
+		   <li><a href = "#"><img src = "img/liright2.jpg "></a></li>
+		   <li><a href = "#"><img src = "img/liright2.jpg "></a></li>
+		   <li><a href = "#"><img src = "img/liright4.jpg "></a></li>
+		   </ul>
+            </div>
+
+		</div>
+		<table></table>
+		<div id="ad-bottom">
+				<!--内容推荐-->
+				<div class="recommend">
+				<h2>
+				推荐内容</h2>
+                <a href="#"><b id="btlf"></b></a>
+				<a href="#"><b id="btrt"></b></a>
+				<ul>
+				<li><img src="images/tuijian01.jpg"/>
+				<p><a href="#">奥运VR全景展现宁泽涛腹肌<br/>科技很奇妙&nbsp;喵喵来吐槽</a></p></li>
+				<li><img src="images/tuijian02.jpg"/>
+				<p><a href="#">不用敲代码<br/>一样拿高薪</a></p></li>
+				<li><img src="images/tuijian03.jpg"/>
+				<p><a href="#">"视频+源码"无保留，全分享<br/>2016最新Android精华资源</a></p></li>
+				<li><img src="images/tuijian04.jpg"/>
+				<p><a href="#">[前端]最全最新知识点汇总<br/>视频+源码+技巧+软件+面试</a></p></li>
+				<li><img src="images/tuijian05.jpg"/>
+				<p><a href="#">云计算大数据之高薪通道<br/>开班时间:9月12日</a></p></li>
+				</ul>
+				</div>
+
+				<!--学习资源-->
+                <div class="resource">
+				<h2>
+				学习资源</h2>
+				<div class="ke">
+                <a href="#">公开课</a>&nbsp;|
+				<a href="#">视频库</a>&nbsp;|
+				<a href="#">好毕设</a></div>
+				<ul>
+				<li><img src="images/ziyuan02.jpg"/>
+				<div>&nbsp;&nbsp;2016年08月04日开课</div>
+				<p><a href="#">终极开发者-Android 7.0 Nougat</a></p>
+				<span>已有384人报名</span>
+				<a href="#"><b>立即报名</b></a>
+				</li>
+				<li><img src="images/ziyuan02.jpg"/>
+				<div>&nbsp;&nbsp;2016年08月08日开课</div>
+				<p><a href="#">PS小白如何快速打造唯美梦幻Ba</a></p>
+				<span>已有218人报名</span>
+				<a href="#"><b>立即报名</b></a>
+				</li>
+				<li><img src="images/ziyuan03.jpg"/>
+				<div>&nbsp;&nbsp;2016年08月10日开课</div>
+				<p><a href="#">前端走向全栈，nodejs快速入门</a></p>
+				<span>已有378人报名</span>
+				<a href="#"><b>立即报名</b></a>
+				</li>
+				<li><img src="images/ziyuan04.jpg"/>
+				<div>&nbsp;&nbsp;2016年08月11日开课</div>
+				<p><a href="#">互联网关键技术之缓存</a></p>
+				<span>已有279人报名</span>
+				<a href="#"><b>立即报名</b></a>
+				</li>
+				<li><img src="images/ziyuan05.jpg"/>
+				<div>&nbsp;&nbsp;2016年08月15日开课</div>
+				<p><a href="#">UI布局-轻松实现卡牌堆叠抽牌效果</a></p>
+				<span>已有168人报名</span>
+				<a href="#"><b>立即报名</b></a>
+				</li>
+				</ul>
+				</div>
+				<!--学员故事-->
+				<div class="story">
+				<h2>
+				传智故事</h2>
+                <div class="ke">
+                <a href="#">学员故事</a>&nbsp;|
+				<a href="#">科技喵喵喵</a></div>
+				<ul>
+				<li><img src="images/gushi01.jpg"/>
+				<p><a href="#">小网管逆袭工资翻9倍</a></p></li>
+				<li><img src="images/gushi02.jpg"/>
+				<p><a href="#">高考结束，放弃大学，依然月薪过万</a></p></li>
+				<li><img src="images/gushi03.png"/>
+				<p><a href="#">《对不起》系列微电影，时尚最爆笑致歉...</a></p></li>
+				<li><img src="images/gushi04.jpg"/>
+				<p><a href="#">不迷茫的毕业季，青春勇敢前进</a></p></li>
+				</ul>
+				</div>
+		</div>
+	</div>
+	<section id="main">
+				<!--传智播客课程中心-->
+		<div id="main_content">
+		<div id="left1">
+		 <h2>传智播客课程中心</h2>
+		 <div class="lesson">
+		    <a href="#">
+			 <h3>JavaEE</h3>
+			 <h4>世界第一编程语言<br>我们的第一学科</h4>
+			<img src="images/java.png">
+			</a>
+		 </div>
+		 
+		 <ul class="right1">
+		 <li>
+		 <span class="circle"></span>
+		  <a href="#"><img src="images/icon1.png">
+		  <p class="center1">课程介绍</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		  <img src="images/icon2.png">
+		  <p class="center1">课程大纲</p>
+		  </a>
+		 </li> 
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon3.png">
+		  <p class="center1">开班时间</p>
+		  </a>
+		  </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon4_1.png">
+		  <p class="center1">师资库</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon5.png">
+		  <p class="center1">就业薪资</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon6.png">
+		  <p class="center1">班级活动</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon7.png">
+		  <p class="center1">公开课</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon8.png">
+		  <p class="center1">视频下载</p>
+		  </a>
+		 </li>
+		 <table style="clear:both"></table>
+		 </ul>
+		</div>
+		<ul class="place">
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+		<li><a href="#">深圳</a></li>
+		<li><a href="#">武汉</a></li>
+		<li><a href="#">郑州</a></li>
+		<li><a href="#">西安</a></li>
+		<li><a href="#">哈尔滨</a></li>
+		<li><a href="#">长沙</a></li>
+		<li><a href="#">济南</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">南京</a></li>
+		<li><a href="#">杭州</a></li>
+		<li><a href="#">成都</a></li>
+		
+		</ul>
+		<ul class="school">
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-20 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-25 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-29 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-24 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-31 火热报名中</a>
+		</li>
+		</ul>
+
+
+
+		<table style="clear:both"></table>
+		<div>
+		<div id="left1">
+		<div class="lesson3">
+		    <a href="#">
+			 <h3>Android</h3>
+			 <h4>入门易成长快<br>我们的第一学科</h4>
+			<img src="images/android.png">
+			</a>
+		 </div>
+		 <ul class="right3">
+		 <li>
+		 <span class="circle"></span>
+		  <a href="#"><img src="images/icon1.png">
+		  <p class="center1">课程介绍</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		  <img src="images/icon2.png">
+		  <p class="center1">课程大纲</p>
+		  </a>
+		 </li> 
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon3.png">
+		  <p class="center1">开班时间</p>
+		  </a>
+		  </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon4_1.png">
+		  <p class="center1">师资库</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon5.png">
+		  <p class="center1">就业薪资</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon6.png">
+		  <p class="center1">班级活动</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon7.png">
+		  <p class="center1">公开课</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon8.png">
+		  <p class="center1">视频下载</p>
+		  </a>
+		 </li>
+		 <table style="clear:both"></table>
+		 </ul>
+		</div>
+		<ul class="place">
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+		<li><a href="#">深圳</a></li>
+		<li><a href="#">武汉</a></li>
+		<li><a href="#">郑州</a></li>
+		<li><a href="#">西安</a></li>
+		<li><a href="#">哈尔滨</a></li>
+		<li><a href="#">长沙</a></li>
+		<li><a href="#">济南</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">南京</a></li>
+		<li><a href="#">杭州</a></li>
+		<li><a href="#">成都</a></li>
+		
+		</ul>
+		<ul class="school">
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-20 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-25 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-29 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-24 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-31 火热报名中</a>
+		</li>
+		</ul>
+
+
+
+
+		<table style="clear:both"></table>
+		<div>
+		<div id="left1">
+		<div class="lesson1">
+		    <a href="#">
+			 <h3>PHP</h3>
+			 <h4>打造横跨前端+后端+移动端<br>全能型人才</h4>
+			<img src="images/php.png">
+			</a>
+		 </div>
+		 <ul class="right2">
+		 <li>
+		 <span class="circle"></span>
+		  <a href="#"><img src="images/icon1.png">
+		  <p class="center1">课程介绍</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		  <img src="images/icon2.png">
+		  <p class="center1">课程大纲</p>
+		  </a>
+		 </li> 
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon3.png">
+		  <p class="center1">开班时间</p>
+		  </a>
+		  </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon4_1.png">
+		  <p class="center1">师资库</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon5.png">
+		  <p class="center1">就业薪资</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon6.png">
+		  <p class="center1">班级活动</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon7.png">
+		  <p class="center1">公开课</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon8.png">
+		  <p class="center1">视频下载</p>
+		  </a>
+		 </li>
+		 <table style="clear:both"></table>
+		 </ul>
+		</div>
+		<ul class="place">
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+		<li><a href="#">深圳</a></li>
+		<li><a href="#">武汉</a></li>
+		<li><a href="#">郑州</a></li>
+		<li><a href="#">西安</a></li>
+		<li><a href="#">哈尔滨</a></li>
+		<li><a href="#">长沙</a></li>
+		<li><a href="#">济南</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">南京</a></li>
+		<li><a href="#">杭州</a></li>
+		<li><a href="#">成都</a></li>
+		
+		</ul>
+		<ul class="school">
+		<li>
+		<a href="#"><b>基</b>PHP基础班 2016-08-20 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>PHP基础班 2016-08-25 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>PHP基础班 2016-08-29 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>PHP基础班 2016-08-24 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>PHP基础班 2016-08-31 火热报名中</a>
+		</li>
+		</ul>
+
+
+
+
+
+		<table style="clear:both"></table>
+		<div>
+		<div id="left1">
+		<div class="lesson4">
+		    <a href="#">
+			 <h3>UI设计</h3>
+			 <h4>打造会代码的全能设计师</h4>
+			<img src="images/ui.png">
+			</a>
+		 </div>
+		 <ul class="right4">
+		 <li>
+		 <span class="circle"></span>
+		  <a href="#"><img src="images/icon1.png">
+		  <p class="center1">课程介绍</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		  <img src="images/icon2.png">
+		  <p class="center1">课程大纲</p>
+		  </a>
+		 </li> 
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon3.png">
+		  <p class="center1">开班时间</p>
+		  </a>
+		  </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon4_1.png">
+		  <p class="center1">师资库</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon5.png">
+		  <p class="center1">就业薪资</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon6.png">
+		  <p class="center1">班级活动</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon7.png">
+		  <p class="center1">公开课</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon8.png">
+		  <p class="center1">视频下载</p>
+		  </a>
+		 </li>
+		 <table style="clear:both"></table>
+		 </ul>
+		</div>
+		<ul class="place">
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+		<li><a href="#">深圳</a></li>
+		<li><a href="#">武汉</a></li>
+		<li><a href="#">郑州</a></li>
+		<li><a href="#">西安</a></li>
+		<li><a href="#">哈尔滨</a></li>
+		<li><a href="#">长沙</a></li>
+		<li><a href="#">济南</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">南京</a></li>
+		<li><a href="#">杭州</a></li>
+		<li><a href="#">成都</a></li>
+		
+		</ul>
+		<ul class="school">
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-20 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-25 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-29 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-24 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-31 火热报名中</a>
+		</li>
+		</ul>
+
+
+
+		<table style="clear:both"></table>
+		<div>
+		<div id="left1">
+		<div class="lesson5">
+		    <a href="#">
+			 <h3>ios</h3>
+			 <h4>入门易成长快<br>我们的第一学科</h4>
+			<img src="images/ios.png">
+			</a>
+		 </div>
+		 <ul class="right5">
+		 <li>
+		 <span class="circle"></span>
+		  <a href="#"><img src="images/icon1.png">
+		  <p class="center1">课程介绍</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		  <img src="images/icon2.png">
+		  <p class="center1">课程大纲</p>
+		  </a>
+		 </li> 
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon3.png">
+		  <p class="center1">开班时间</p>
+		  </a>
+		  </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon4_1.png">
+		  <p class="center1">师资库</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon5.png">
+		  <p class="center1">就业薪资</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon6.png">
+		  <p class="center1">班级活动</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon7.png">
+		  <p class="center1">公开课</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon8.png">
+		  <p class="center1">视频下载</p>
+		  </a>
+		 </li>
+		 <table style="clear:both"></table>
+		 </ul>
+		</div>
+		<ul class="place">
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+		<li><a href="#">深圳</a></li>
+		<li><a href="#">武汉</a></li>
+		<li><a href="#">郑州</a></li>
+		<li><a href="#">西安</a></li>
+		<li><a href="#">哈尔滨</a></li>
+		<li><a href="#">长沙</a></li>
+		<li><a href="#">济南</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">南京</a></li>
+		<li><a href="#">杭州</a></li>
+		<li><a href="#">成都</a></li>
+		
+		</ul>
+		<ul class="school">
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-20 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-25 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-29 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-24 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-31 火热报名中</a>
+		</li>
+		</ul>
+
+
+
+
+		<table style="clear:both"></table>
+		<div>
+		<div id="left1">
+		<div class="lesson6">
+		    <a href="#">
+			 <h3>前端移动与开发</h3>
+			 <h4>大前端改变世界<br>我们改变前端</h4>
+			<img src="images/web.png">
+			</a>
+		 </div>
+		 <ul class="right6">
+		 <li>
+		 <span class="circle"></span>
+		  <a href="#"><img src="images/icon1.png">
+		  <p class="center1">课程介绍</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		  <img src="images/icon2.png">
+		  <p class="center1">课程大纲</p>
+		  </a>
+		 </li> 
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon3.png">
+		  <p class="center1">开班时间</p>
+		  </a>
+		  </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon4_1.png">
+		  <p class="center1">师资库</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon5.png">
+		  <p class="center1">就业薪资</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon6.png">
+		  <p class="center1">班级活动</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon7.png">
+		  <p class="center1">公开课</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon8.png">
+		  <p class="center1">视频下载</p>
+		  </a>
+		 </li>
+		 <table style="clear:both"></table>
+		 </ul>
+		</div>
+		<ul class="place">
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+		<li><a href="#">深圳</a></li>
+		<li><a href="#">武汉</a></li>
+		<li><a href="#">郑州</a></li>
+		<li><a href="#">西安</a></li>
+		<li><a href="#">哈尔滨</a></li>
+		<li><a href="#">长沙</a></li>
+		<li><a href="#">济南</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">南京</a></li>
+		<li><a href="#">杭州</a></li>
+		<li><a href="#">成都</a></li>
+		
+		</ul>
+		<ul class="school">
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-20 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-25 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-29 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-24 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-31 火热报名中</a>
+		</li>
+		</ul>
+
+
+
+		<table style="clear:both"></table>
+		<div>
+		<div id="left1">
+		<div class="lesson7">
+		    <a href="#">
+			 <h3>C/C++</h3>
+			 <h4>培养永不过时的全栈型<br>C/C++应用开发工程师</h4>
+			<img src="images/c.png">
+			</a>
+		 </div>
+		 <ul class="right7">
+		 <li>
+		 <span class="circle"></span>
+		  <a href="#"><img src="images/icon1.png">
+		  <p class="center1">课程介绍</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		  <img src="images/icon2.png">
+		  <p class="center1">课程大纲</p>
+		  </a>
+		 </li> 
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon3.png">
+		  <p class="center1">开班时间</p>
+		  </a>
+		  </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon4_1.png">
+		  <p class="center1">师资库</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon5.png">
+		  <p class="center1">就业薪资</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon6.png">
+		  <p class="center1">班级活动</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon7.png">
+		  <p class="center1">公开课</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon8.png">
+		  <p class="center1">视频下载</p>
+		  </a>
+		 </li>
+		 <table style="clear:both"></table>
+		 </ul>
+		</div>
+		<ul class="place">
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+		<li><a href="#">深圳</a></li>
+		<li><a href="#">武汉</a></li>
+		<li><a href="#">郑州</a></li>
+		<li><a href="#">西安</a></li>
+		<li><a href="#">哈尔滨</a></li>
+		<li><a href="#">长沙</a></li>
+		<li><a href="#">济南</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">南京</a></li>
+		<li><a href="#">杭州</a></li>
+		<li><a href="#">成都</a></li>
+		
+		</ul>
+		<ul class="school">
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-20 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-25 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-29 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-24 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-31 火热报名中</a>
+		</li>
+		</ul>
+
+
+
+
+
+
+		<table style="clear:both"></table>
+		<div>
+		<div id="left1">
+		<div class="lesson8">
+		    <a href="#">
+			 <h3>网络营销</h3>
+			 <h4>不用敲代码一样拿高薪</h4>
+			<img src="images/m.png">
+			</a>
+		 </div>
+		 <ul class="right8">
+		 <li>
+		 <span class="circle"></span>
+		  <a href="#"><img src="images/icon1.png">
+		  <p class="center1">课程介绍</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		  <img src="images/icon2.png">
+		  <p class="center1">课程大纲</p>
+		  </a>
+		 </li> 
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon3.png">
+		  <p class="center1">开班时间</p>
+		  </a>
+		  </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon4_1.png">
+		  <p class="center1">师资库</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon5.png">
+		  <p class="center1">就业薪资</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon6.png">
+		  <p class="center1">班级活动</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon7.png">
+		  <p class="center1">公开课</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon8.png">
+		  <p class="center1">视频下载</p>
+		  </a>
+		 </li>
+		 <table style="clear:both"></table>
+		 </ul>
+		</div>
+		<ul class="place">
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+		<li><a href="#">深圳</a></li>
+		<li><a href="#">武汉</a></li>
+		<li><a href="#">郑州</a></li>
+		<li><a href="#">西安</a></li>
+		<li><a href="#">哈尔滨</a></li>
+		<li><a href="#">长沙</a></li>
+		<li><a href="#">济南</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">南京</a></li>
+		<li><a href="#">杭州</a></li>
+		<li><a href="#">成都</a></li>
+		
+		</ul>
+		<ul class="school">
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-20 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-25 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-29 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-24 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-31 火热报名中</a>
+		</li>
+		</ul>
+
+
+
+
+
+
+		<table style="clear:both"></table>
+		<div>
+		<div id="left1">
+		<div class="lesson9">
+		    <a href="#">
+			 <h3>python</h3>
+			 <h4>打造python前后端<br>培养全栈工程师</h4>
+			<img src="images/python.png">
+			</a>
+		 </div>
+		 <ul class="right9">
+		 <li>
+		 <span class="circle"></span>
+		  <a href="#"><img src="images/icon1.png">
+		  <p class="center1">课程介绍</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		  <img src="images/icon2.png">
+		  <p class="center1">课程大纲</p>
+		  </a>
+		 </li> 
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon3.png">
+		  <p class="center1">开班时间</p>
+		  </a>
+		  </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon4_1.png">
+		  <p class="center1">师资库</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon5.png">
+		  <p class="center1">就业薪资</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon6.png">
+		  <p class="center1">班级活动</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon7.png">
+		  <p class="center1">公开课</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon8.png">
+		  <p class="center1">视频下载</p>
+		  </a>
+		 </li>
+		 <table style="clear:both"></table>
+		 </ul>
+		</div>
+		<ul class="place">
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+		<li><a href="#">深圳</a></li>
+		<li><a href="#">武汉</a></li>
+		<li><a href="#">郑州</a></li>
+		<li><a href="#">西安</a></li>
+		<li><a href="#">哈尔滨</a></li>
+		<li><a href="#">长沙</a></li>
+		<li><a href="#">济南</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">南京</a></li>
+		<li><a href="#">杭州</a></li>
+		<li><a href="#">成都</a></li>
+		
+		</ul>
+		<ul class="school">
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-20 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-25 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-29 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-24 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-31 火热报名中</a>
+		</li>
+		</ul>
+
+
+
+
+
+
+		<table style="clear:both"></table>
+		<div>
+		<div id="left1">
+		<div class="lesson10">
+		    <a href="#">
+			 <h3>云计算之大数据</h3>
+			 <h4>混沌钟寻找规律<br>数据中挖掘价值</h4>
+			<img src="images/yun.png">
+			</a>
+		 </div>
+		 <ul class="right10">
+		 <li>
+		 <span class="circle"></span>
+		  <a href="#"><img src="images/icon1.png">
+		  <p class="center1">课程介绍</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		  <img src="images/icon2.png">
+		  <p class="center1">课程大纲</p>
+		  </a>
+		 </li> 
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon3.png">
+		  <p class="center1">开班时间</p>
+		  </a>
+		  </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon4_1.png">
+		  <p class="center1">师资库</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon5.png">
+		  <p class="center1">就业薪资</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon6.png">
+		  <p class="center1">班级活动</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon7.png">
+		  <p class="center1">公开课</p>
+		  </a>
+		 </li>
+		 <li>
+		 <span class="circle"></span>
+		 <a href="#">
+		 <img src="images/icon8.png">
+		  <p class="center1">视频下载</p>
+		  </a>
+		 </li>
+		 <table style="clear:both"></table>
+		 </ul>
+		</div>
+		<ul class="place">
+		<li><a href="#">北京</a></li>
+		<li><a href="#">上海</a></li>
+		<li><a href="#">广州</a></li>
+		<li><a href="#">深圳</a></li>
+		<li><a href="#">武汉</a></li>
+		<li><a href="#">郑州</a></li>
+		<li><a href="#">西安</a></li>
+		<li><a href="#">哈尔滨</a></li>
+		<li><a href="#">长沙</a></li>
+		<li><a href="#">济南</a></li>
+		<li><a href="#">重庆</a></li>
+		<li><a href="#">南京</a></li>
+		<li><a href="#">杭州</a></li>
+		<li><a href="#">成都</a></li>
+		
+		</ul>
+		<ul class="school">
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-20 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-25 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>基</b>Andrioid安卓基础班 2016-08-29 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-24 火热报名中</a>
+		</li>
+		<li>
+		<a href="#"><b>就</b>Andrioid安卓基础班 2016-08-31 火热报名中</a>
+		</li>
+		</ul>
+
+	</div>
+	</section>
+		<!--页面底部-->
+	<footer id="foot">
+	  <!--社区本周精华-->
+	  <div class="great">
+				<h2>
+				社区本周精华</h2>
+				<div class="ke">
+                <a href="#">开班报到</a>&nbsp;|
+				<a href="#">学员故事</a>&nbsp;|
+				<a href="#">活动专区</a></div>
+
+				<ul>
+				<li><img src="images/jinghua01.jpg"/>
+				<p><a href="#">金色七月，你来见证——62期UI设计就业...</a></p></li>
+				<li><img src="images/jinghua02.jpg"/>
+				<p><a href="#">北京传智javaEE基础241期（20160729）</a></p></li>
+				<li><img src="images/jinghua03.jpg"/>
+				<p><a href="#">慢慢来&nbsp;不要急---当你踏进传智的那天起</a></p></li>
+				<li><img src="images/jinghua04.jpg"/>
+				<p><a href="#">我的青春我做主——北京传智javaEE基础...</a></p></li>
+				</ul>
+	  </div>
+	  <!--灰条-->
+	  <div class="gray">
+	  <ul>
+	  <li id="l01">
+	  <img src="images/foot01.png"/>
+	  <a href="#">免费分享视频教程</a></li>
+	  <li id="l02">
+	   <img src="images/foot02.png"/>
+	   <a href="#">每年更新课程体系</a></li>
+	  <li id="l03">
+	   <img src="images/foot03.png"/>
+	  <a href="#">定期举办技术沙龙</a></li>
+	  <li id="l04">
+	   <img src="images/foot04.png"/>
+	  <a href="#">技术薪资全部公开</a></li>
+	  <li id="l05">
+	   <img src="images/foot05.png"/>
+	  <a href="#">7×24小时职业规划</a></li>
+	  </ul>
+
+	  </div>
+      <!--关于我们-->
+	  <div class="we">
+	  <ul>
+	  <li><ul>
+	  <li>
+	  关于我们</li>
+	  <li>
+	  <a href="#">传智简介</a></li>
+	  <li>
+	  <a href="#">加入传智</a></li>
+	  </li>
+	  </ul></li>
+	  	  <li><ul>
+	  <li>
+	  旗下品牌</li>
+	  <li>
+	  <a href="#">黑马程序员</a></li>
+	  <li>
+	  <a href="#">博学谷</a></li>
+	  </li>
+	  </ul></li>
+	  	  <li><ul>
+	  <li>
+	  校区攻略</li>
+	  <li>
+	  <a href="#">校区环境</a></li>
+	  <li>
+	  <a href="#">住宿攻略</a></li>
+	  <li>
+	  <a href="#">来校路线</a></li>
+	  </li>
+	  </ul></li>
+	  	  <li><ul>
+	  <li>
+	  学习资源</li>
+	  <li>
+	  <a href="#">视频库</a></li>
+	  <li>
+	  <a href="#">公开课</a></li>
+	  <li>
+	  <a href="#">云课堂</a></li>
+	  </li>
+	  </ul></li>
+	  	  <li><ul>
+	  <li>
+	  传智故事</li>
+	  <li>
+	  <a href="#">学员故事</a></li>
+	  <li>
+	  <a href="#">技术喵喵喵</a></li>
+	  </li>
+	  </ul></li>
+	  <li class="er">
+	  <img src="images/wx_cz.jpg">
+	  <p>传智播客官方微信</p>
+	  </li>
+	  <li class="er">
+	  <img src="images/wx_hm.jpg">
+	  <p>黑马程序员官方微信</p>
+	  </li>
+	  </ul>
+	  </div>
+    <!--友情链接-->
+	<div class="friend">
+	 <p>友情链接</p>
+	 <ul>
+	 
+	 <li><a href="#">黑马程序员</a></li>
+	 <li><a href="#">博学谷</a></li>
+	 <li><a href="#">首席营销官</a></li>
+	 <li><a href="#">图片制作</a></li>
+	 <li><a href="#">五笔输入法下载</a></li>
+	 <li><a href="#">中国在职研究生网</a></li>
+	 <li><a href="#">123标识设计网</a></li>
+	 <li><a href="#">电脑主题</a></li>
+	 <li><a href="#">新东方小语种</a></li>
+	 <li><a href="#">进销存软件</a></li>
+	 <li><a href="#">在职研究生</a></li>
+	 <li><a href="#">职称计算机考试</a></li>
+	 <li><a href="#">武汉房产网</a></li>
+	 <li><a href="#">培训师</a></li>
+	 <li><a href="#">java1234</a></li>
+	 <li><a href="#">ThinkPHP框架</a></li>
+	 <li><a href="#">酷素材</a></li>
+	 <li><a href="#">中国教育网</a></li>
+	 <li><a href="#">CCNA</a></li>
+	 <li><a href="#">求职信</a></li>
+	 <li><a href="#">PPT模板</a></li>
+	 <li><a href="#">我爱IT技术网</a></li>
+	 <li><a href="#">云计算</a></li>
+	 <li><a href="#">论文查重</a></li>
+	 <li><a href="#">听课网</a></li>
+	 <li><a href="#">3d模型下载</a></li>
+	 <li><a href="#">视频教程网</a></li>
+	
+	</ul>
+	</div>
+	<!--logo-->
+	<div class="logo">
+	<ul class="list">
+	<li><img src="images/logo.png"></li>
+	<li><span>版权所有2006-2016北京传智播客教育技术有限公司&nbsp;地址：北京市昌平区建材城西路金燕龙办公楼一层&nbsp;邮编：100096</span>
+	<img src="images/small_03.png">
+	<br><span>
+	电话：010-82935150/60/70&nbsp;邮箱：zhanghl@itcast.cn&nbsp;京ICP备08001421号&nbsp;京公网安备110108007702</span>
+	</li>
+	<li><ul class="imgs">
+      <li><img src="images/360.jpg"></li>
+	  <li><img src="images/chengxin.jpg"></li>
+	  <li><img src="images/safe.jpg"></li>
+	</ul></li>
+	</ul>
+	</div>
+	</footer>
+
+ </body>
+</html>

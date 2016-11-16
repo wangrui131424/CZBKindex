@@ -1,0 +1,279 @@
+/*推荐内容*/
+#ad-bottom div.recommend{
+  margin:0 auto;
+  width:1200px;
+  overflow:hidden;
+  
+  position:relative;
+}
+#ad-bottom div.recommend{
+	margin-top:15px;
+}
+#btlf{
+ width:37px;
+ height:22px;
+ position:absolute;
+ top:20px;
+ right:43px;
+ background:url(images/lr_03.png) no-repeat ;
+}
+#btrt{
+ width:37px;
+ height:22px;
+ position:absolute;
+ top:20px;
+ right:7px;
+ background:url(images/lr_03.png) no-repeat -36px 0;
+}
+#ad-bottom div.recommend ul li{
+  float:left;
+  width:228px;
+  height:248px;
+  margin:20px 5px;
+  padding-top:50px;
+  text-align:center;
+  border:1px solid #ddd;
+}
+#ad-bottom div.recommend ul li p{
+ font-weight:2px;
+ margin-top:20px ;
+}
+/*学习资源*/
+#ad-bottom div.resource{
+  margin:0 auto;
+  width:1202px;
+  overflow:hidden;
+  position:relative;
+}
+#ad-bottom div.resource div.ke{
+  position:absolute;
+  top:20px;
+  right:15px;
+}
+#ad-bottom div.resource div.ke a:hover{
+ color:1ba9ea;
+ text-decoration:none;
+}
+#ad-bottom div.resource ul li{
+  float:left;
+  width:228px;
+  height:193px;
+  margin:15px 5px;
+  border:1px solid #ddd;
+  position:relative;
+  font-size:13px;
+}
+#ad-bottom div.resource ul li p{
+ font-weight:2px;
+ margin:10px 0 10px 10px;
+}
+#ad-bottom div.resource ul li a b{
+ display:inline-block;
+ padding:0 10px;
+ float:right;
+ border:1px solid #ed4600;
+ border-radius:3px;
+ color:#ed4600;
+ font-weight:1px;
+ margin-right:10px;
+ margin-top:-2px;
+}
+#ad-bottom div.resource ul li span{
+ margin-left:10px;
+}
+#ad-bottom div.resource ul li div{
+ width:228px;
+ height:20px;
+ line-height:20px;
+ background:black;
+ opacity:0.4;
+ position:absolute;
+ bottom: 65px;
+ color:white;
+
+}
+/*传智故事*/
+#ad-bottom div.story{
+  margin:0 auto;
+  width:1202px;
+  overflow:hidden;
+  position:relative;
+}
+#ad-bottom div.story div.ke{
+  position:absolute;
+  top:20px;
+  right:15px;
+}
+#ad-bottom div.story div.ke a:hover{
+ color:1ba9ea;
+ text-decoration:none;
+}
+#ad-bottom div.story ul li{
+  float:left;
+  width:288px;
+  height:198px;
+  margin:15px 5px;
+  border:1px solid #ddd;
+ 
+}
+#ad-bottom div.story ul li p{
+ text-align:center;
+ font-weight:2px;
+ margin:10px 0 10px 10px;
+}
+/*页面底部*/
+#foot{
+	margin:0 auto;
+	width:1304px;
+	min-height:100px;
+	
+}
+/*社区精华*/
+#foot div.great{
+  
+  overflow:hidden;
+  background:white;
+  width:1304px;
+  position:relative;
+}
+#foot div.great h2{
+margin-left:50px;
+}
+#foot div.great div.ke{
+  position:absolute;
+  top:20px;
+  right:60px;
+}
+#foot div.great div.ke a:hover{
+ color:1ba9ea;
+ text-decoration:none;
+}
+#foot div.great ul{
+ margin-left:50px;
+}
+#foot div.great ul li{
+  float:left;
+  width:288px;
+  height:198px;
+  margin:15px 5px;
+  border:1px solid #ddd;
+  padding-bottom:20px;
+}
+#foot div.great ul li p{
+ text-align:center;
+ font-weight:2px;
+ font-size:14px;
+ margin:10px 0 10px 10px;
+}
+/*灰条*/
+#foot div.gray{
+ height:100px;
+	background-color:#f3f3f3;
+}
+#foot div.gray ul{
+width:1202px;
+margin-left:70px;
+margin-top:58px;
+overflow:hidden;
+}
+#foot div.gray ul li{
+ float:left;
+ border-right:2px solid #ddd;
+ padding:0 30px;
+ height:40px;
+ font-size:15px;
+ margin-top:27px;
+}
+#foot div.gray ul li img{
+ margin-top:3px;
+}
+#foot div.gray ul li:last-child{
+ border-right:0;
+}
+
+/*关于我们*/
+#foot div.we{
+ background:white;
+}
+#foot div.we ul{
+ margin-top:10px;
+ overflow:hidden;
+ padding-bottom:30px;
+ margin-bottom:0;
+}
+#foot div.we ul li{
+ float:left;
+ font-size:15px;
+ color:black;
+ margin-left:30px;
+ margin-right:20px;
+ margin-top:10px;
+}
+#foot div.we ul li.er{
+  margin-top:30px;
+  font-size:12px;
+}
+#foot div.we ul li.er p{
+ margin:0;
+}
+#foot div.we ul li ul li{
+ clear:both;
+}
+#foot div.we ul li ul li a{
+ font-size:12px;
+}
+/*友情链接*/
+#foot div.friend{
+ background:white;
+ padding-bottom:30px;
+}
+#foot div.friend p{
+ width:1202px;
+ font-size:15px;
+ color:black;
+ margin:0 auto;
+ padding:10px 0;
+ border-top:1px solid #ddd;
+ margin-top:0;
+}
+#foot div.friend ul{
+ width:1202px;
+ overflow:hidden;
+ margin-left:50px;
+}
+#foot div.friend ul li{
+ float:left;
+ margin:10px 10px 10px 0;
+}
+/*logo*/
+#foot div.logo{
+ background:white;
+
+}
+#foot div.logo ul.list{
+ width:1202px;
+ overflow:hidden;
+ margin-left:50px;
+ margin-top:0;
+  border-top:1px solid #ddd;
+  padding-top:20px;
+}
+#foot div.logo ul.list li{
+ float:left;
+ height:60px;
+ margin:10px ;
+ color:black;
+ 
+}
+#foot div.logo ul.list li span{
+display:inline-block;
+ margin-bottom:10px ;
+}
+#foot div.logo ul.list li ul.imgs{
+ margin-left:1px;
+ overflow:hidden;
+}
+#foot div.logo ul.list li ul.imgs li{
+ margin:0 5px;
+
+}
